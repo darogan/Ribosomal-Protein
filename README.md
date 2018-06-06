@@ -12,8 +12,7 @@ Hamilton, R.S. (2019) DOI
 
 To be added
 
-<img src="Images/ribosome_intro.jpg" width="500">
-
+<center><img src="Images/ribosome_intro.jpg" width="500"></center>
 
 ## Downloading and pre-processing ribosome structure CIF and annotation files ##
 
