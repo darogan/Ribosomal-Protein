@@ -5,14 +5,14 @@ Hamilton, R.S.<sup>1,2</sup>
 <sup>2</sup> Department of Physiology, Development, & Neuroscience, University of Cambridge, Downing Site, Cambridge, CB2 3DY,
 
 
-## Publication ##
+## Citation ##
 Hamilton, R.S. (2019) DOI
 
 ## Abstract ##
 
 To be added
 
-<img src="Images/ribosome_intro.jpg" width="500">
+<img src="Images/ribosome_intro.png" width="500">
 
 
 ## Downloading and pre-processing ribosome structure CIF and annotation files ##
@@ -21,11 +21,18 @@ To be added
 
 Download the human 80s ribosome structure from [RCSB: 6EK0.cif](https://files.rcsb.org/download/6EK0.cif)
 
-#### PDB Website SOURCE ####
+#### Structure Chain to Ribosomal Protein Naming Conversion  ####
+
+This is a horrible hack at the moment, but the easiest way to like the structure file chain naming to the ribosomal protein naming conventions. Start by saving the html source as txt.
 
     cat 6EK0.source.copy.txt | grep -v "^Protein" | grep -v "^Full" | \
     grep -v "^Molecule" | grep -v "^Find" | grep -v "Mutations" | \
     sed 's/Entity ID: //g' | sed 's/Gene Names: //g' > 6EK0.source.copy.ed.txt
+
+<b>To Do:</b>
+
+Create a permanent look up table linking the CIF to official ribosomal protein names
+
 
 ## Calculating Ribosomal Protein Surface Scores ##
 
@@ -37,33 +44,24 @@ Output
     40s: SG 113.84 S6; RPS6
     40s: SI 107.44 S8; RPS8
     40s: SM 100.57 S12; RPS12
-    40s: Sf  98.14 Ubiquitin-S27a; RPS27A (UBA80 UBCEP1)
-    40s: SZ  96.58 S25; RPS25
 
+<b>To Do:</b>
+
+* Add cut off for output e.g. score of 100
+* Use permanent look up table in output
 
 
 ## Visualisation using Pymol ##
 
+#### Set up Pymol ####
     viewport 1000,1000
     set ignore_case, off
 
-    Out
-    Rpl19, Rps5, Rpl14, Rps18, Rpl17, Rpl24, Rpl26, Rps12, Rps3a, Rps9, Rps4x, Rpl23a, Rpl9
-
-    colour red, chain LR (SF, LM, SS, LP, LW, LY, SM, SB, SJ, SE, LX, LH)
-
-
-    > MaxABDiff.ribo.cntl[ (MaxABDiff.ribo.cntl$CntrMeanDiff > mean(MaxABDiff.ribo.cntl$CntrMeanDiff)), ]$external_gene_name
-
-    Rpl36a Rpl35a Rps26  Rpl34
-
+#### Desired script output ####
 
     colour red, chain LR #Rpl19
-    colour red, chain SF #Rps5
-    #colour red, chain LF #Rpl7   
-    #colour red, chain #Rpl12
-    colour red, chain LW #Rpl24
-
+    ...
+    colour red, chain LR #Rpl19
 
 
 ## Create MPG movies from Pymol PNG ##
