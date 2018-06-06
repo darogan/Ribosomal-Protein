@@ -1,0 +1,102 @@
+
+viewport 1000,1000
+set ignore_case, off
+
+
+
+
+Out
+Rpl19, Rps5, Rpl14, Rps18, Rpl17, Rpl24, Rpl26, Rps12, Rps3a, Rps9, Rps4x, Rpl23a, Rpl9
+
+colour red, chain LR (SF, LM, SS, LP, LW, LY, SM, SB, SJ, SE, LX, LH)
+
+
+> MaxABDiff.ribo.cntl[ (MaxABDiff.ribo.cntl$CntrMeanDiff > mean(MaxABDiff.ribo.cntl$CntrMeanDiff)), ]$external_gene_name
+  
+   Rpl36a Rpl35a Rps26  Rpl34
+
+
+colour red, chain LR #Rpl19 
+colour red, chain SF #Rps5
+#colour red, chain LF #Rpl7   
+#colour red, chain #Rpl12 
+colour red, chain LW #Rpl24
+colour red, chain SS #Rps18
+colour red, chain LY #Rpl26
+#colour red, chain #Rps12
+#colour red, chain #Rps4l  
+colour red, chain LM #Rpl14
+#colour red, chain #Rpl15 
+#colour red, chain La #Rpl27a
+colour red, chain Sc #Rps28
+colour red, chain SE #Rps4x 
+#colour red, chain LX #Rpl23a
+colour red, chain LH #Rpl9
+colour red, chain SQ #Rps16
+#colour red, chain Ll #Rpl39
+colour red, chain SD #Rps3
+colour red, chain LU #Rpl22 
+colour red, chain SB #Rps3a3 
+colour red, chain SJ #Rps9 
+#colour red, chain SC #Rps2
+colour red, chain SN #Rps13
+colour red, chain LB #Rpl3 
+colour red, chain LZ #Rpl27
+#colour red, chain LT #Rpl21
+colour red, chain SA #Rpsa 
+colour red, chain LG #Rpl5 
+colour red, chain SR #Rps17
+colour red, chain SX #Rps23
+#colour red, chain #Rpl38 
+colour red, chain SG #Rps6
+colour red, chain Lo #Rpl36a 
+#colour red, chain Lf #Rpl35a
+#colour red, chain Sa #Rps26 
+#colour red, chain #Rpl34 
+
+
+> Max4CellDiff.ribo.mean[ (Max4CellDiff.ribo.mean$FourCellMeanDiff > mean(Max4CellDiff.ribo.mean$FourCellMeanDiff)), ]$external_gene_name
+#colour red, chain #Rps12  
+##Rpl7l1 
+##Rplp2  
+#colour red, chain Ll #Rpl39  
+colour red, chain Sc #Rps28  
+##Rplp1  
+colour red, chain LY #Rpl26  
+colour red, chain Sb #Rps27  
+colour red, chain Lh #Rpl35  
+colour red, chain Lc #Rpl30  
+colour red, chain SP #Rps15  
+#colour red, chain #Rps4l  
+##Rpl38  
+colour red, chain Ld #Rpl31  
+#colour red, chain #Rpl12  
+#colour red, chain Sa #Rps26  
+colour red, chain Li #Rpl36  
+#colour red, chain SL #Rps11  
+colour red, chain SZ #Rps25  
+colour red, chain SF #Rps5
+colour red, chain ST #Rps19  
+colour red, chain Li #Rpl37  
+#colour red, chain #Rpl10  
+colour red, chain SI #Rps8   
+colour red, chain LZ #Rpl27  
+#colour red, chain LT #Rps21  
+colour red, chain Lz #Rpl10a 
+colour red, chain SS #Rps18  
+#colour red, chain Le #Rpl32  
+colour red, chain LV #Rpl23  
+colour red, chain LG #Rpl5   
+colour red, chain SX #Rps23  
+colour red, chain SD #Rps3   
+colour red, chain LW #Rpl24  
+colour red, chain SQ #Rps16 
+
+
+
+
+
+
+
+
+convert -delay 6 -quality 99 Aga_Selection*.png Aga_Selection_movie.mpg
