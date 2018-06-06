@@ -60,7 +60,7 @@ Output
 
     colour red, chain LR #Rpl19
     ...
-    colour red, chain LR #Rpl19
+    colour red, chain S12 #Rps12
 
 
 ## Create MPG movies from Pymol PNG ##
