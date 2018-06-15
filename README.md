@@ -63,7 +63,19 @@ Output
     colour red, chain S12 #Rps12
 
 
+
 ## Create MPG movies from Pymol PNG ##
+
+#### Pymol Movie Creation ####
+
+    Movie: Program: Camera Loop: Y-Roll: 16 seconds
+
+#### Pymol Save Movie as PNGs ####
+
+    File: Save Movie as: PNG
+
+#### Convert Pymol Movie PNGs to MPG using [ImageMagick](https://www.imagemagick.org/script/index.php) ####
+
 
  ````
  convert -delay 6 -quality 99 <filename>_*.png <filename>_movie.mpg
